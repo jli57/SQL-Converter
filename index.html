@@ -1,0 +1,86 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="css/style.css"></script>
+		<script type="text/javascript" src="javascript/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="javascript/converter.js"></script>
+    </head>
+	<body>
+		<div> 
+			<a href="temp_table.html">Temp Table Conversion</a> 
+		</div> 
+		</br>
+		<button onclick="compare_two_tables()" id="generateSQL">Compare Count</button> 
+		<button onclick="basic_compare()" id="basic_comapre">Basic Compare</button>
+		<button id="getTableMetaData">Table Meta Data</button>
+		<button onclick="create_string_splitter_table()" id="string_splitter">String Splitter Table</button> 		</br> </br>
+		<!--<h3>SQL Validation Generator</h3> -->
+		<button class="toggle" id="togglevalidationFields">Add Validation</button> </br>
+		
+		<div class="hiddenByDefault" id="validationFields"> 
+			</br> 
+			<label>Create Validation Table</label><input type="checkbox" id="createValidationTable"></input></br>
+			<label>Test Case <label><input type="text" class="userInput, field" id="testCase"  ></input></br>
+		</div> 
+		</br>
+		<label>Temp Table Name </label><input type="text" class="userInput" id="tempTable"  ></input> </br> </br>
+		<label>Table A </label><input type="text" class="userInput" id="tableA"  ></input> </br> </br>
+		<label>Table B </label><input type="text"  class="userInput" id="tableB" ></input> </br> </br>
+		
+		<div id	="joinByFields"> 
+			<label>Join Field 1 </label><input type="text"  class="userInput, field"  id="joinByField1" ></input>
+			<label>Include ISNULL</label><input type="checkbox" id="joinByFieldIsNull1" checked></input>
+			</br>
+			<label>Join Field 2 </label><input type="text"  class="userInput, field"  id="joinByField2" ></input> 
+			<label>Include ISNULL</label><input type="checkbox" id="joinByFieldIsNull2" checked></input>
+			</br>
+			<label>Join Field 3 </label><input type="text"  class="userInput, field"  id="joinByField3" ></input> 
+			<label>Include ISNULL</label><input type="checkbox" id="joinByFieldIsNull3" checked></input>
+			</br>
+		</div> 
+		</br>
+		<button class="addFields"  id="addjoinByField">Add Join Condition</button>
+		<button onclick="">Copy to Group By</button></br> 
+		</br>
+		<button class="toggle" id="toggleaggregationFields">Add Group By</button></br>
+		<div class="hiddenByDefault" id="aggregationFields">
+			</br>
+			<div id="groupByFields">
+				<label>Group By Field 1 </label><input type="text"  class="userInput, field"  id="groupByField1" ></input></br>
+				<label>Group By Field 2 </label><input type="text"  class="userInput, field"  id="groupByField2" ></input></br>
+				<label>Group By Field 3 </label><input type="text"  class="userInput, field"  id="groupByField3" ></input></br>
+				<label>Group By Field 4 </label><input type="text"  class="userInput, field"  id="groupByField4" ></input></br>
+				<label>Group By Field 5 </label><input type="text"  class="userInput, field"  id="groupByField5" ></input></br>
+			</div> 
+			</br>
+			<label>Add More Fields:</label><input type="text" class="userInput, field" id="addCountgroupByField" ></input> 
+			<button class="addFields"  id="addgroupByField" >Add Group By Fields</button> 
+			</br> </br> 
+			<div  id="aggregateFields">
+				<label>Aggregate Field 1 </label><input type="text"  class="userInput, field"  id="aggregateField1" ></input></br>
+				<label>Aggregation Type</label><input type="text"  class="userInput, field"  id="aggregateFieldType1" ></input></br>
+			</div> 
+			</br>
+		</div>
+		</br> 
+		<div id="compareByFields"> 
+			<label>Comparison Field 1 </label><input type="text"  class="userInput, field"  id="compareByField1" ></input>
+			<label>Include ISNULL</label><input type="checkbox" id="compareByFieldIsNull1" checked></input>
+			</br>
+			<label>Comparison Field 2 </label><input type="text"  class="userInput, field"  id="compareByField2" ></input> 
+			<label>Include ISNULL</label><input type="checkbox" id="compareByFieldIsNull2" checked></input>
+			</br>
+			<label>Comparison Field 3 </label><input type="text"  class="userInput, field"  id="compareByField3" ></input> 
+			<label>Include ISNULL</label><input type="checkbox" id="compareByFieldIsNull3" checked></input>
+			</br>
+		</div>
+		</br>		
+		<label>Add More Fields:</label><input type="text" class="userInput, field" id="addcompareByField" ></input> 
+		<button class="addFields" id="addcompareByField" >Add Comparison Fields</button> 
+		
+		<!--<button onclick="compare_count()">Basic Count</button> </br> -->
+		</br> </br>
+		<textarea class="textdump" id="result"></textarea> 
+		
+		<script>splitString()</script>
+	</body>
+</html>

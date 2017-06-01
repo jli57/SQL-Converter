@@ -1,0 +1,23 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="css/style.css"></script>
+		<script type="text/javascript" src="javascript/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="javascript/converter.js"></script>
+    </head>
+	<body>
+		<div> 
+			<a href="index.html">Compare Two Tables</a> 
+		</div> 
+		</br>
+		<button onclick="parse_tempTable('create')">Create Temp Table Statements</button> 
+		<button onclick="parse_tempTable('drop')">Drop Temp table Statements</button> 
+		</br> </br> 
+		<button onclick="parse_tempTable('comma')"> Add Comma - Integer</button> 
+		<button onclick="parse_tempTable('string')"> Add Comma - String</button> 
+		</br> </br>
+		<textarea class="textdump" id="input"></textarea> 
+		</br> </br>
+		<textarea class="textdump" id="result"></textarea> 
+		
+	</body>
+</html>

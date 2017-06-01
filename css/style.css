@@ -1,0 +1,27 @@
+.userInput {
+	padding-left: 10;
+	padding-top: 0;
+	padding-bottom:0.4em;
+	padding-right: 0.4em;
+	text-align: top;
+	width: 500px;
+}
+
+.hiddenByDefault {
+	display: none; 
+}
+
+
+.field {
+	width: 250px;
+}
+
+.textdump {
+	width: 500px; 
+	height: 200px; 
+}
+
+#testCase {
+	width: 600px; 
+	height: 20px;
+}
